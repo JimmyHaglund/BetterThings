@@ -1,0 +1,8 @@
+# I have better things to do
+This project contains two parts: one performs daily searches for job ads and stores the results. The other is an application that can be used to browse those search results and ease the process of applying to jobs by generating PDF files for cover letters and assembling an application kit in a folder while opening the URL for the job ad's application site or email address.  
+The goal of this project is pretty much exclusively personal use, since applying for jobs is anxiety inducing and generally a waste of time - a perfect candidate for automation.  
+The application has several weaknesses that prevent wider use: 
+- Performing searches requires a key to Arbetsförmedlingen's API, which cannot be redistributed directly.
+- The automatic search is set up to run using Window's Task Scheduler, via a simple script. Since setting the schedule is a simple one-time operation there is no support in the project for setting it up automatically.
+- The browser application relies on system file management operations to open new processes for generating files and opening folders. These work fine normally, but has no support in actual Unity engine builds. As a result, the browser has to be run via Unity's editor in order to work properly. Builds can still be used to browse ads, but the key point of the application is automation of sending applications.
+- The requirements are fairly specialised towards making many low-effort applications over fewer ones with more care put into them. It's not a good way to get an actual job, but more of a tool to reduce workload when asked to send 30 applications a month.
